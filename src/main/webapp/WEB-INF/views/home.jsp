@@ -22,6 +22,7 @@
 					<th scope="col">Descripción</th>
 					<th scope="col">Costo</th>
 					<th scope="col">Precio</th>
+					<th scope="col">Categoría</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -32,6 +33,7 @@
 						<td><c:out value="${p.getDescripcion()}"></c:out></td>
 						<td><c:out value="${p.getCosto()}"></c:out></td>
 						<td><c:out value="${p.getPrecio()}"></c:out></td>
+						<td><c:out value="${p.getCategoria().getNombre()}"></c:out></td>
 				</c:forEach>
 			</tbody>
 		</table>

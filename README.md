@@ -7,6 +7,11 @@
 - Creamos Repositorio para Productos.
 - Consumimos desde controller.
 
+## 27 de Enero
+- Incluimos Entity Class para Categoría.
+- Establecemos asociación @ManyToOne entre Producto y Categoería.
+- Mostramos lista de productos y su categoría.
+
 # BD de ejemplo
 Utilizaremos la BD de ejemplo provista por Oracle, la que puedes descagar desde este [link](https://www.oracletutorial.com/getting-started/oracle-sample-database/). Una vez la descagues, verás estos 4 archivos.
 

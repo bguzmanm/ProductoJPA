@@ -3,7 +3,11 @@ package cl.awakelab.productosjpa.model;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+
+import org.hibernate.annotations.ManyToAny;
 
 @Entity
 @Table(name="products")
@@ -24,18 +28,32 @@ public class Producto {
 	
 	@Column(name="list_price")
 	private double precio;
+	
+	@ManyToOne()
+	@JoinColumn(name="category_id")
+	private Categoria categoria;
+	
 
 	public Producto() {
 		
 	}
 	
-	public Producto(int id, String nombre, String descripcion, double costo, double precio) {
+	public Producto(int id, String nombre, String descripcion, double costo, double precio, Categoria categoria) {
 		super();
 		this.id = id;
 		this.nombre = nombre;
 		this.descripcion = descripcion;
 		this.costo = costo;
 		this.precio = precio;
+		this.categoria = categoria;
+	}
+
+	public Categoria getCategoria() {
+		return categoria;
+	}
+
+	public void setCategoria(Categoria categoria) {
+		this.categoria = categoria;
 	}
 
 	public int getId() {
