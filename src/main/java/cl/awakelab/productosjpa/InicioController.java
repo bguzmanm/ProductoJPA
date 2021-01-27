@@ -30,6 +30,8 @@ public class InicioController {
 		
 		List<Producto> lista = productoRepositorio.findAll();
 		
+		productoRepositorio.
+		
 		model.addAttribute("lista", lista);
 		
 		return "home";
@@ -38,6 +40,8 @@ public class InicioController {
 	@RequestMapping(value="/pais", method=RequestMethod.GET)
 	public String paises(Model model) {
 		List<Countries> countriesList = countriesRepo.findAll();
+		
+		
 		
 		model.addAttribute("countriesList", countriesList);
 		
