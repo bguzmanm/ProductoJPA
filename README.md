@@ -12,6 +12,11 @@
 - Establecemos asociación @ManyToOne entre Producto y Categoería.
 - Mostramos lista de productos y su categoría.
 
+## 29 de Enero
+- Incluimos servicio REST que retorna la lista de productos
+- Incluimos servicio REST que retorna un producto.
+- Incluimos dependencia a Jackson y org.json.
+
 # BD de ejemplo
 Utilizaremos la BD de ejemplo provista por Oracle, la que puedes descagar desde este [link](https://www.oracletutorial.com/getting-started/oracle-sample-database/). Una vez la descagues, verás estos 4 archivos.
 

@@ -1,8 +1,6 @@
 package cl.awakelab.productosjpa;
 
 import java.util.List;
-import java.util.logging.LogManager;
-
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -13,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import cl.awakelab.productosjpa.model.Countries;
 import cl.awakelab.productosjpa.model.Producto;
+
 import cl.awakelab.productosjpa.repositorios.ICountriesRepository;
 import cl.awakelab.productosjpa.repositorios.IProductoRepositorio;
 
@@ -30,8 +29,6 @@ public class InicioController {
 		
 		List<Producto> lista = productoRepositorio.findAll();
 		
-		productoRepositorio.
-		
 		model.addAttribute("lista", lista);
 		
 		return "home";
@@ -41,13 +38,10 @@ public class InicioController {
 	public String paises(Model model) {
 		List<Countries> countriesList = countriesRepo.findAll();
 		
-		
-		
 		model.addAttribute("countriesList", countriesList);
 		
 		return "paises";
 	}
 	
-
 	
 }
